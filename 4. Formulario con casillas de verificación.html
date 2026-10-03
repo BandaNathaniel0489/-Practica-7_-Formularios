@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Checkbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 320px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #333333;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #555555;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+        .checkbox-group {
+            margin-bottom: 15px;
+        }
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            color: #333;
+            cursor: pointer;
+        }
+        .checkbox-option input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Formularios con checkbox</h2>
+        <form action="" method="post">
+            <label for="nombre">Ingresa tu nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            
+            <label>Selecciona los lenguajes que conozcas:</label>
+            <div class="checkbox-group">
+                <label class="checkbox-option"><input type="checkbox" name="Java"> Java</label>
+                <label class="checkbox-option"><input type="checkbox" name="Python"> Python</label>
+                <label class="checkbox-option"><input type="checkbox" name="C#"> C#</label>
+                <label class="checkbox-option"><input type="checkbox" name="Flutter"> Flutter</label>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
+</body>
+</html>
