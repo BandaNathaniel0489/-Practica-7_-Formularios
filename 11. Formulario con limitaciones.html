@@ -2,76 +2,24 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario con Limitaciones</title>
+    <title>Limitaciones</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-        .card {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 350px;
-        }
-        h2 {
-            margin-top: 0;
-            color: #333333;
-            text-align: center;
-            font-size: 1.5rem;
-        }
-        label {
-            display: block;
-            margin-bottom: 6px;
-            color: #555555;
-            font-weight: bold;
-        }
-        input[type="text"], input[type="password"], textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 1rem;
-            font-family: inherit;
-        }
-        input:disabled, textarea[readonly] {
-            background-color: #e9ecef;
-            cursor: not-allowed;
-        }
+        body { font-family: sans-serif; background: #121212; color: #fff; }
+        form { background: #1e1e1e; padding: 20px; }
+        h3 { color: #bb86fc; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h2>Formulario con limitaciones</h2>
-        <form action="" method="post">
-            <!-- Deshabilitación de campo -->
-            <label for="nombre">Ingresa tu nombre (Deshabilitado):</label>
-            <input type="text" id="nombre" name="nombre" disabled>
-            
-            <!-- Limitación de caracteres -->
-            <label for="pass">Contraseña (Máx. 5 caracteres):</label>
-            <input type="password" id="pass" name="pass" maxlength="5">
-            
-            <!-- Solo lectura -->
-            <label for="comentarios">Comentarios (Solo lectura):</label>
-            <textarea id="comentarios" name="comentarios" readonly rows="3">Este es mi comentario y no se puede borrar</textarea>
-        </form>
-    </div>
-
-    <script>
-        if (window.history.replaceState) {
-            window.history.replaceState(null, null, window.location.href);
-        }
-    </script>
+    <header>
+        <h3>Limitaciones</h3>
+    </header>
+    <form>
+        <label>Deshabilitado:</label>
+        <input type="text" disabled value="No editable">
+        <label>Máx. 5 caracteres:</label>
+        <input type="password" maxlength="5">
+        <label>Solo lectura:</label>
+        <textarea readonly rows="2">Texto fijo</textarea>
+    </form>
 </body>
 </html>
