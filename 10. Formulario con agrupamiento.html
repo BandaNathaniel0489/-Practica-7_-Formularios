@@ -2,133 +2,35 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formularios con Agrupamiento</title>
-    <!-- Librería de íconos en línea -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Agrupamiento</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 20px 0;
-        }
-        .card {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 450px;
-        }
-        h2 {
-            margin-top: 0;
-            color: #333333;
-            text-align: center;
-            font-size: 1.5rem;
-        }
-        fieldset {
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            padding: 15px;
-            margin-bottom: 15px;
-        }
-        legend {
-            font-weight: bold;
-            color: #007bff;
-            padding: 0 5px;
-        }
-        label {
-            display: block;
-            margin-bottom: 4px;
-            margin-top: 8px;
-            color: #555555;
-            font-size: 0.9rem;
-            font-weight: bold;
-        }
-        input[type="text"], input[type="file"], input[type="date"] {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 0.95rem;
-        }
-        .btn-group {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        button {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            font-size: 1rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-        button[type="submit"] {
-            background-color: #007bff;
-            color: white;
-        }
-        button[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-        button[type="reset"] {
-            background-color: #6c757d;
-            color: white;
-        }
-        button[type="reset"]:hover {
-            background-color: #5a6268;
-        }
+        body { font-family: sans-serif; background: #121212; color: #fff; }
+        form { background: #1e1e1e; padding: 20px; }
+        h3, legend { color: #bb86fc; }
+        button[type="submit"] { background: #6200ee; color: #fff; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h2>Formularios con agrupamiento</h2>
-        <form action="" method="post">
-            <fieldset>
-                <legend>Datos personales</legend>
-                <label for="nombre_apellido">Nombre y apellido:</label>
-                <input type="text" id="nombre_apellido" name="nombre_apellido">
-                
-                <label for="documento">Documento válido:</label>
-                <input type="file" id="documento" name="documento">
-                
-                <label for="fecha_nacimiento">Fecha de nacimiento:</label>
-                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
-            </fieldset>
-            
-            <fieldset>
-                <legend>Datos de estudio</legend>
-                <label for="escuela">Nombre de la escuela:</label>
-                <input type="text" id="escuela" name="escuela">
-                
-                <label for="certificado">Certificado válido:</label>
-                <input type="file" id="certificado" name="certificado">
-                
-                <label for="fecha_egreso">Fecha de egreso:</label>
-                <input type="date" id="fecha_egreso" name="fecha_egreso">
-            </fieldset>
-            
-            <div class="btn-group">
-                <button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i></button>
-                <button type="reset">Borrar <i class="fa fa-trash"></i></button>
-            </div>
-        </form>
-    </div>
-
-    <script>
-        if (window.history.replaceState) {
-            window.history.replaceState(null, null, window.location.href);
-        }
-    </script>
+    <header>
+        <h3>Agrupamiento</h3>
+    </header>
+    <form>
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label>Nombre:</label>
+            <input type="text" name="nombre">
+            <label>Fecha Nacimiento:</label>
+            <input type="date" name="fecha">
+        </fieldset>
+        <fieldset>
+            <legend>Datos Escolares</legend>
+            <label>Escuela:</label>
+            <input type="text" name="escuela">
+        </fieldset>
+        <div>
+            <button type="submit">Enviar ✈</button>
+            <button type="reset">Borrar 🗑</button>
+        </div>
+    </form>
 </body>
 </html>
